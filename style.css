@@ -30,6 +30,7 @@ body {
     background-size: cover;
     */
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 body *{
     font-family: 'Inter', sans-serif;
@@ -37,7 +38,8 @@ body *{
 }
 
 #container {
-    width: 380px;
+    width: 100%;
+    max-width: 588px;
     margin: 56px auto 0px;
 }
 #switch {
@@ -130,4 +132,13 @@ footer {
     text-align: center;
     padding: 24px 0;
     font-size: 14px;
+}
+
+@media (min-width: 700px) {
+    :root{
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
